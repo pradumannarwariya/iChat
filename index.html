@@ -389,4 +389,31 @@ const chatBox = document.getElementById("chat-box");
           headers: {
             "Authorization": "Bearer <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>",
             "Content-Type": "application/json",
-            "HTTP-Referer": "<ldl>", // Optional
+            "HTTP-Referer": "<https://pradumannarwariya.github.io/iChat/>", // Optional
+            "X-Title": "<CyberBot Chat>" // Optional
+          },
+          body: JSON.stringify({
+            model: "deepseek/deepseek-v3-base:free",
+            messages: [
+              {
+                role: "user",
+                content: userMessage
+              }
+            ]
+          })
+        });
+
+        const data = await response.json();
+        const botMessage = data.choices?.[0]?.message?.content || "Something went wrong. 🤖";
+
+        botDiv.textContent = `Bot: ${botMessage}`;
+        chatBox.scrollTop = chatBox.scrollHeight;
+
+      } catch (error) {
+        botDiv.textContent = "Bot: Error processing your message.";
+        console.error("API Error:", error);
+      }
+    }
+  </script>
+</body>
+</html>
