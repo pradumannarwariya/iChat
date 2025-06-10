@@ -233,3 +233,22 @@ body::-webkit-scrollbar-thumb:hover {
     font-size: 1.34rem;
   }
 }
+
+.horizontal-scroll-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 36px;
+  /* Optional: hide scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) rgba(0,0,0,0.1);
+}
+.horizontal-scroll-container::-webkit-scrollbar {
+  height: 7px;
+  background: transparent;
+}
+.horizontal-scroll-container::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 4px;
+}
