@@ -116,6 +116,8 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 #theme-button {
+  top:10px;
+  rigth:10px;
   padding: 10px 20px;
   background-color: var(--accent-color);
   color: white;
