@@ -107,33 +107,26 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* Theme Switcher */
 .theme-switcher-container {
-  position: relative;
-  bottom: 20px;
-  right: 20px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
   display: inline-block;
   z-index: 1001;
 }
 
 #theme-button {
-  top:10px;
-  rigth:10px;
-  padding: 10px 20px;
+  padding: 12px 28px;
   background-color: var(--accent-color);
   color: white;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
-  font-weight: 600;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
   transition: background-color 0.3s ease;
   z-index: 10;
 }
 
-#theme-button:hover {
-  background-color: var(--text-color);
-  color: var(--accent-color);
-}
-
-/* Dropdown */
 .dropdown {
   display: none;
   position: absolute;
@@ -144,8 +137,14 @@ body::-webkit-scrollbar-thumb:hover {
   z-index: 1;
   border-radius: 4px;
   top: 110%;
-  right: 0;
+  left: 0;
 }
+#theme-button:hover {
+  background-color: var(--text-color);
+  color: var(--accent-color);
+}
+
+/* Dropdown */
 
 .dropdown div {
   padding: 10px;
