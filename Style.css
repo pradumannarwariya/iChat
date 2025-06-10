@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root {
+  --bg-color: radial-gradient(#ffffff, #ddeb9d);
+  --text-color: black;
+  --accent-color: #443850;
+}
+
+body.dark-theme {
+  --bg-color: radial-gradient(#1a122d, #000000);
+  --text-color: #ffffff;
+  --accent-color: #66ccff;
+}
+
+body.solarized-theme {
+  --bg-color: radial-gradient(#424545, #1c1c1c);
+  --text-color: #32f2ff;
+  --accent-color: #ffffff;
+}
+
+body {
+  background: var(--bg-color);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Raleway', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: all 0.3s ease-in-out;
+  color: var(--text-color);
+  z-index: 1;
+}
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Nav Styles */
+.nav {
+  list-style: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 18px 45px;
+  z-index: 1000;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeInDown 0.3s ease;
+}
+
+.nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  position: relative;
+  font-weight: bold;
+  padding: 8px 10px;
+  transition: all 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 10px var(--accent-color);
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: -4px;
+  background-color: var(--text-color);
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* Theme Switcher */
+.theme-switcher-container {
+  position: relative;
+  display: inline-block;
+}
+
+#theme-button {
+  top:20px;
+  right:20px;
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+#theme-button:hover {
+  background-color: var(--text-color);
+  color: var(--accent-color);
+}
+
+/* Dropdown */
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+  z-index: 1;
+  border-radius: 4px;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown div {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: black;
+}
+
+.dropdown div:hover {
+  background-color: #eee;
+}
+
+.theme-switcher-container:hover .dropdown,
+.theme-switcher-container.active .dropdown {
+  display: block;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+.section {
+  margin: 10px ;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
