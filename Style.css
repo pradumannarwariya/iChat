@@ -34,13 +34,12 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 20px;
-  flex-wrap: wrap;
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
   transition: all 0.3s ease-in-out;
   color: var(--text-color);
   z-index: -1000;
+  align-item: center;
+  justify-item: center;
 }
 
 /* Scrollbar */
@@ -108,7 +107,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* Theme Switcher */
 .theme-switcher-container {
-  position: fixed;
+  position: relative;
   bottom: 20px;
   right: 20px;
   display: inline-block;
