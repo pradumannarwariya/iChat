@@ -35,15 +35,17 @@
 
 
   const swiper = new Swiper('.swiper', {
-      effect: 'cube',
-      grabCursor: true,
-      cubeEffect: {
-        shadow: false,
-        slideShadows: true,
-        shadowOffset: 20,
-        shadowScale: 0.94,
-      },
-      loop: true,
-    });
-
-
+  effect: 'cube', // Optional, you may try 'slide' for better compatibility
+  grabCursor: true,
+  cubeEffect: {
+    shadow: false,
+    slideShadows: true,
+    shadowOffset: 20,
+    shadowScale: 0.94,
+  },
+  loop: true, // Ensures infinite scrolling
+  allowTouchMove: true, // Enables swipe gestures
+  touchStartPreventDefault: false, // Prevents blocking gestures on Android
+  slidesPerView: 1, // One slide visible at a time
+  spaceBetween: 0, // No gaps between slides
+});
