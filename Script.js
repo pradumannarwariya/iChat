@@ -33,7 +33,7 @@
     document.body.className = savedTheme;
   }
 
-if (typeof Swiper !== "undefined") {
+
   const swiper = new Swiper('.swiper', {
       effect: 'cube',
       grabCursor: true,
@@ -47,6 +47,3 @@ if (typeof Swiper !== "undefined") {
     });
 
 
-} else {
-  console.error("Swiper library not loaded!");
-}
