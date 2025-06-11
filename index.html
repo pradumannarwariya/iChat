@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
   <meta charset="UTF-8" />
-  <!-- Ensure responsive viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pradumam's site</title>
+  <title>Pradumam's Site</title>
   <!-- Main CSS -->
   <link rel="stylesheet" href="Style.css">
-  <!-- Swiper CSS -->
+  <!-- Swiper CSS (only include once) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <!-- Swiper JS will be loaded with defer -->
+  <!-- Swiper JS (defer so it loads before your main JS) -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
+  <!-- Your main JS (defer so it runs after Swiper and DOM is ready) -->
+  <script src="Script.js" defer></script>
 </head>
+
 
 
 
