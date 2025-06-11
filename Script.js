@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+
   // Theme Switcher Functionality
   const themeContainer = document.getElementById('theme-container');
   const themeButton = document.getElementById('theme-button');
@@ -32,7 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (savedTheme) {
     document.body.className = savedTheme;
   }
-const swiper = new Swiper('.swiper', {
+
+if (typeof Swiper !== "undefined") {
+  const swiper = new Swiper('.swiper', {
       effect: 'cube',
       grabCursor: true,
       cubeEffect: {
@@ -44,4 +46,7 @@ const swiper = new Swiper('.swiper', {
       loop: true,
     });
 
-});
+
+} else {
+  console.error("Swiper library not loaded!");
+}
