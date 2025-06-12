@@ -81,7 +81,7 @@ body {
 
 /* Nav styles */
 .nav {
-  height: 5.5%;
+  height: 80px;
   list-style: none;
   position: fixed;
   top: 10px;
